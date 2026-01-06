@@ -1,105 +1,329 @@
 <router-outlet></router-outlet>
-<div class="bg-slate-100 overflow-y-scroll w-screen h-screen antialiased text-slate-300 selection:bg-blue-600 selection:text-white">
-    <div class="flex flex-col relative w-screen">
-        <div id="menu" class="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 fixed left-0 h-screen overflow-y-scroll">
-           <div id="logo" class="my-4 px-6">
-            <h1 class="text-lg md:text-2xl font-bold text-white">Dash<span class="text-blue-500">8</span>.</h1>
-            <p class="text-slate-500 text-sm">Manage your actions and activities</p>
-           </div>
-           <div id="profile" class="px-6 py-10">
-            <p class="text-slate-500">Welcome back,</p>
-            <a href="#" class="inline-flex space-x-2 items-center">
-                <span>
-                    <img class="rounded-full w-8 h-8" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=128&q=80" alt="">
-                </span>
-                <span class="text-sm md:text-base font-bold">
-                    Edward Tompson
-                </span>
-                </a>
-           </div>
-           <div id="nav" class="w-full px-6">
-            <a href="#" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 bg-blue-800 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-                      </svg>
+<!-- app.component.html -->
+<div class="min-h-screen bg-gray-100">
+  <!-- Sidebar Fijo -->
+  <aside class="bg-gray-900 text-slate-300 w-64 fixed left-0 top-0 h-screen overflow-y-auto z-50">
 
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg font-bold leading-5 text-white">Dashboard</span>
-                    <span class="text-sm text-white/50 hidden md:block">Data Overview</span>
-                </div>
-            </a>
-            <a href="#" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-                      </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg text-slate-300 font-bold leading-5">Database</span>
-                    <span class="text-sm text-slate-500 hidden md:block">Database Manager</span>
-                </div>
-            </a>
-            <a href="#" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
-                      </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg text-slate-300 font-bold leading-5">Cloud Storage</span>
-                    <span class="text-sm text-slate-500 hidden md:block">Manage Cloud Storage</span>
-                </div>
-            </a>
-            <a href="#" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5" />
-                      </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg text-slate-300 font-bold leading-5">Reports</span>
-                    <span class="text-sm text-slate-500 hidden md:block">Manage Reports</span>
-                </div>
-            </a>
-            <a href="#" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
-                      </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg text-slate-300 font-bold leading-5">Security</span>
-                    <span class="text-sm text-slate-500 hidden md:block">Generate Security Keys</span>
-                </div>
-            </a>
-            <a href="#" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
-                      </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg text-slate-300 font-bold leading-5">Extensions</span>
-                    <span class="text-sm text-slate-500 hidden md:block">Manage Extensions</span>
-                </div>
-            </a>
-            <a href="#" class="w-full px-2 inline-flex space-x-2 items-center py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
-                      </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg text-slate-300 font-bold leading-5">Settings</span>
-                    <span class="text-sm text-slate-500 hidden md:block">Edit App Settings</span>
-                </div>
-            </a>
+    <!-- Logo -->
+    <div class="my-6 px-6">
+      <h1 class="text-2xl font-bold text-white">
+        Guion<span class="text-blue-500">B.</span>
+      </h1>
+      <p class="text-slate-500 text-sm mt-1">Gestiona tus acciones y actividades</p>
+    </div>
 
-           </div>
+    <!-- Perfil -->
+    <div class="px-6 py-6 border-b border-slate-700">
+      <p class="text-slate-500 text-xs mb-2">Bienvenido de nuevo,</p>
+      <a href="#" class="flex items-center gap-3 hover:text-white transition-colors">
+        <img
+          class="rounded-full w-10 h-10 ring-2 ring-blue-500/50"
+          src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=128&q=80"
+          alt="Profile">
+        <div>
+          <span class="block text-base font-bold text-white">Edward Tompson</span>
+          <span class="text-xs text-slate-400">Administrador</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="px-4 py-6">
+
+      <!-- Dashboard -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Dashboard</span>
+        </div>
+      </a>
+
+      <!-- Sabicadero -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Sabicadero</span>
+          <span class="text-xs text-slate-500 group-hover:text-slate-300">Resumen de datos</span>
+        </div>
+      </a>
+
+      <!-- Base de datos -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Base de datos</span>
+          <span class="text-xs text-slate-500 group-hover:text-slate-300">Conde de bases de datos</span>
+        </div>
+      </a>
+
+      <!-- Almacenamiento en la nube -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Almacenamiento en la nube</span>
+          <span class="text-xs text-slate-500 group-hover:text-slate-300">Gestionar el almacenamiento</span>
+        </div>
+      </a>
+
+      <!-- Informes -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Informes</span>
+          <span class="text-xs text-slate-500 group-hover:text-slate-300">Informes de gestión</span>
+        </div>
+      </a>
+
+      <!-- Seguridad -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Seguridad</span>
+          <span class="text-xs text-slate-500 group-hover:text-slate-300">Configurar seguridad</span>
+        </div>
+      </a>
+
+      <!-- Extensiones -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Extensiones</span>
+          <span class="text-xs text-slate-500 group-hover:text-slate-300">extensiones</span>
+        </div>
+      </a>
+
+      <!-- Configuración -->
+      <a href="#" class="flex items-center gap-3 px-4 py-3 mb-2 hover:bg-gray-800 rounded-lg transition-colors group">
+        <svg class="w-5 h-5 text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <div>
+          <span class="block font-medium text-slate-300 group-hover:text-white">Configuración</span>
+          <span class="text-xs text-slate-500 group-hover:text-slate-300">Configurar la app</span>
+        </div>
+      </a>
+
+    </nav>
+
+    <!-- Footer Sidebar -->
+    <div class="px-6 py-4 border-t border-slate-700 mt-auto">
+      <button class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+        </svg>
+        <span>Cerrar sesión</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Contenido Principal -->
+  <main class="ml-64 p-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Dashboard</h1>
+        <p class="text-gray-600">Bienvenido, Edward Tompson</p>
+      </div>
+
+      <!-- Cards de Estadísticas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+        <!-- Card Usuarios -->
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-gray-500 text-sm font-medium">Total Usuarios</h3>0
+              <p class="text-3xl font-bold text-gray-800 mt-2">1,234</p>
+            </div>
+            <div class="bg-blue-100 p-3 rounded-full">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-8.194a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="text-green-600 text-sm font-medium">↑ 12.5%</span>
+            <span class="text-gray-500 text-sm"> vs mes anterior</span>
+          </div>
         </div>
 
+        <!-- Card Base de Datos -->
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-gray-500 text-sm font-medium">Bases de Datos</h3>
+              <p class="text-3xl font-bold text-gray-800 mt-2">48</p>
+            </div>
+            <div class="bg-green-100 p-3 rounded-full">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="text-green-600 text-sm font-medium">↑ 8.2%</span>
+            <span class="text-gray-500 text-sm"> vs mes anterior</span>
+          </div>
+        </div>
+
+        <!-- Card Almacenamiento -->
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-purple-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-gray-500 text-sm font-medium">Almacenamiento</h3>
+              <p class="text-3xl font-bold text-gray-800 mt-2">85%</p>
+            </div>
+            <div class="bg-purple-100 p-3 rounded-full">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="text-yellow-600 text-sm font-medium">↗ 2.4 GB</span>
+            <span class="text-gray-500 text-sm"> usado este mes</span>
+          </div>
+        </div>
+
+        <!-- Card Seguridad -->
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-red-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-gray-500 text-sm font-medium">Alertas Seguridad</h3>
+              <p class="text-3xl font-bold text-gray-800 mt-2">3</p>
+            </div>
+            <div class="bg-red-100 p-3 rounded-full">
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.786 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="text-green-600 text-sm font-medium">↓ 60%</span>
+            <span class="text-gray-500 text-sm"> vs mes anterior</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Gráficos y Tablas -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- Gráfico de Actividad -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold text-gray-800">Actividad Reciente</h2>
+            <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+              <option>Últimos 7 días</option>
+              <option>Últimos 30 días</option>
+              <option>Este año</option>
+            </select>
+          </div>
+          <div class="h-64 flex items-center justify-center border-2 border-dashed border-gray-200 rounded-lg">
+            <p class="text-gray-500">Gráfico de actividad aquí</p>
+          </div>
+        </div>
+
+        <!-- Últimos Informes -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="text-xl font-bold text-gray-800 mb-6">Últimos Informes</h2>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div>
+                <h4 class="font-medium text-gray-800">Informe Mensual</h4>
+                <p class="text-sm text-gray-500">Generado el 15 Dic 2024</p>
+              </div>
+              <button class="text-blue-600 hover:text-blue-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div>
+                <h4 class="font-medium text-gray-800">Análisis Seguridad</h4>
+                <p class="text-sm text-gray-500">Generado el 10 Dic 2024</p>
+              </div>
+              <button class="text-blue-600 hover:text-blue-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div>
+                <h4 class="font-medium text-gray-800">Reporte Usuarios</h4>
+                <p class="text-sm text-gray-500">Generado el 5 Dic 2024</p>
+              </div>
+              <button class="text-blue-600 hover:text-blue-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Actividad Reciente -->
+      <div class="mt-8">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="text-xl font-bold text-gray-800 mb-6">Actividad del Sistema</h2>
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead>
+                <tr>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Usuario</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acción</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0 h-8 w-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-blue-600 font-medium">ET</span>
+                      </div>
+                      <div class="ml-3">
+                        <p class="text-sm font-medium text-gray-900">Edward Tompson</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-sm text-gray-900">Acceso al sistema</td>
+                  <td class="px-4 py-3 text-sm text-gray-500">Hace 5 minutos</td>
+                  <td class="px-4 py-3">
+                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                      Activo
+                    </span>
+                  </td>
+                </tr>
+                <!-- Más filas de actividad... -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
     </div>
+  </main>
 </div>
